@@ -25,3 +25,12 @@ var mostPopularFood = [
 // Output them in a tidy top-ten fashion in the console.
 
 // NO for loops!
+
+mostPopularFood.unshift('bean burritos');
+mostPopularFood.splice(9,1,'buffalo-flavored cauliflower');
+let i=1;
+mostPopularFood.forEach(function (x) {
+    console.log(`${i}-${x}\n`);
+    i ++;
+});
+// console.log(mostPopularFood);
