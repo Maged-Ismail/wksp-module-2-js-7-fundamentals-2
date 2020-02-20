@@ -11,7 +11,7 @@ characters.sort();
 
 // outcome?
 ```
-
+[ 'Beth', 'Jerry', 'Morty', 'Rick', 'Summer' ]
 ---
 
 This method will sort the array items by their `unicode` numbers.
@@ -35,6 +35,7 @@ numbers.sort();
 
 // outcome?
 ```
+[0, 12, 123, 13, 6, 76,   9]
 
 ---
 
@@ -56,6 +57,6 @@ numbers.sort((a, b) => a - b)
 
 // outcome?
 ```
-
+[0,  6,   9, 12,13, 76, 123]
 ---
 

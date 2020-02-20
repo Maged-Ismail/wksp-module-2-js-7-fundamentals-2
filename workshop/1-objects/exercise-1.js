@@ -16,8 +16,16 @@
 //     monthOfBirth: 'July'
 // }
 
+let name = {'first': 'Maged','last': 'Ismail'};
+let myObject = {'name': name, 'age': '35', 'city':'Montreal','siblings':'3','petName':'none', 'monthOfBirth':'February'}
+
+
 // A) console.log() your object.
+console.log(myObject);
 // B) console.log() a few of the values in the object.
+
+console.log(myObject.age);
+console.log(myObject.name.last);
 
 //-------------------------------------------------
 
@@ -31,6 +39,11 @@
 //     - Pets (number of pets, names of pets, etc.)
 
 // HINT: You can just modify the object that you created before.
+
+myObject.occupation = 'Engineer';
+myObject.sports = 'Boxing';
+myObject.height = '6ft1';
+console.log(myObject);
 
 //-------------------------------------------------
 
@@ -47,9 +60,9 @@
 // HINT: Most movies have multiple actors. What data-structure do we use to
 // represent a collection of similar things?
 
-var favoriteMovie = {
+var favoriteMovie = {'Title': 'Inception', 'Director':'Christopher Nolan', 'Year':'2010',
+'Rating':'8.8', 'Actors': ['Leonardo Dicaprio', 'Ellen Page', 'Joseph Gordon']}
 
-}
 
 
 //-------------------------------------------------
@@ -65,8 +78,8 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+person.age;    // => 26
+person[key];     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -89,8 +102,7 @@ const alyssa = {
 };
 
 function fullName(person) {
-    // Your code here
-
+    return `${person.name.first} ${person.name.middle} ${person.name.last}`;
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -114,8 +126,18 @@ const rick = {
 };
 
 function betterFullName(person) {
-    // Your code here
-
-}
+    let check = person.name;
+    let fullName;
+        if (check.first != undefined){
+            fullName = check.first;
+        }
+        if (check.middle != undefined){
+            fullName += ' ' + check.middle;
+        }
+        if (check.last != undefined){
+            fullName +=' ' + check.last;
+        }
+        return fullName
+    }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"
